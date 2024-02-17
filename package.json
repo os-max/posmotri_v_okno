@@ -1,0 +1,31 @@
+{
+  "name": "posmotri_v_okno",
+  "version": "1.0.0",
+  "description": "Проектная работа \"Посмотри в окно\"",
+  "main": "./scripts/script.js",
+  "scripts": {
+    "test": "echo \"Oh hi!\"",
+    "check": "prettier --check './**/*.{html,css,js}'",
+    "format": "prettier --write './**/*.{html,css,js}'",
+    "lint": "stylelint **/*.css",
+    "lintfix": "stylelint **/*.css --fix",
+    "fixAll": "npm run lintfix && npm run format"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/os-max/posmotri_v_okno.git"
+  },
+  "keywords": [
+    "Practicum"
+  ],
+  "author": "М. Осипов",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/os-max/posmotri_v_okno/issues"
+  },
+  "homepage": "https://github.com/os-max/posmotri_v_okno#readme",
+  "dependencies": {
+    "prettier": "^3.2.5",
+    "stylelint": "^16.2.1"
+  }
+}
