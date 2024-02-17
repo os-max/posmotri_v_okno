@@ -71,6 +71,10 @@ ol {
   flex: 1;
 }
 
+.search-form__fieldset:nth-child(2) {
+  align-self: flex-start;
+}
+
 .search-form__textfield {
   appearance: none;
   color: #fff;
@@ -91,10 +95,48 @@ ol {
   outline: none;
 }
 
+.search-form__label {
+  cursor: pointer;
+}
+
 .search-form__label:has(:focus-visible) {
   outline: 1px white solid;
   outline-offset: 3px;
 }
+
+.search-form__checkbox-list {
+  display: flex;
+  gap: 15px;
+}
+
+.search-form__checkbox-list>.search-form__label {
+  display: flex;
+  gap: 5px;
+}
+
+.search-form__pseudo-checkbox {
+  display: flex;
+  height: 19px;
+  width: 19px;
+  border: solid 1px #fff;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::before {
+  background-color: #fff;
+  display:inline-block;
+  content: '';
+  inline-size: 15px;
+  block-size: 15px;
+  margin: auto;
+}
+
+.search-form__label:hover>.search-form__label-text {
+  text-decoration: underline;
+}
+
 
 .content__details {
   inline-size: 100%;
@@ -113,6 +155,7 @@ ol {
 }
 
 .content__list {
+  padding: 2px;
   max-block-size: 298px;
   overflow-y: scroll;
   scrollbar-color: black transparent;
@@ -222,61 +265,3 @@ ol {
   inline-size: 100%;
   max-block-size: 298px;
 }
-
-.search-form__checkbox-list {
-  display: flex;
-  gap: 15px;
-}
-
-.search-form__pseudo-checkbox {
-  display: flex;
-  height: 19px;
-  width: 19px;
-  border: solid 1px #fff;
-  justify-content: center;
-  align-items: center;
-}
-
-.search-form__checkbox:checked + .search-form__pseudo-checkbox::before {
-  background-color: #fff;
-  display:inline-block;
-  content: '';
-  inline-size: 15px;
-  block-size: 15px;
-  margin: auto;
-}
-
-
-
-/* --------------------------------------------------------------------- */
-
-/*
-
-.search-form__checkbox-list {
-  display: flex;
-  gap: 15px;
-}
-
-.search-form__fieldset:nth-child(2) {
-  align-self: flex-start;
-}
-
-.search-form__pseudo-checkbox {
-  display: flex;
-  height: 19px;
-  width: 19px;
-  border: solid 1px #fff;
-  justify-content: center;
-  align-items: center;
-}
-
-.search-form__checkbox:checked + .search-form__pseudo-checkbox::before {
-  background-color: #fff;
-  display:inline-block;
-  content: '';
-  inline-size: 15px;
-  block-size: 15px;
-  margin: auto;
-}
-
-*/
