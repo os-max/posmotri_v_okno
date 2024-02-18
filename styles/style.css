@@ -91,6 +91,7 @@ ol {
 .search-form__fieldset-title {
   font: inherit;
   line-height: 21.6px;
+  padding-block-end: 5px;
 }
 
 .search-form__label {
@@ -164,6 +165,7 @@ ol {
 .button {
   color: inherit;
   font-family: 'Fira Sans Condensed Bold', sans-serif;
+  font-size: 18px;
   line-height: 21.6px;
   border: 1px solid #fff;
   background-color: transparent;
