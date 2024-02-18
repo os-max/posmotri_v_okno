@@ -61,7 +61,7 @@ ol {
 
 .result__video-container {
   position: relative;
-  padding-block-end: 16px;
+  margin-block-end: 16px;
 }
 
 .result__video {
@@ -72,6 +72,7 @@ ol {
 }
 
 .search-form {
+  block-size: 54px;
   display: flex;
   justify-content: space-between;
   gap: 40px;
@@ -219,7 +220,7 @@ ol {
   outline: 1px solid #fff;
 }
 
-.content__list:has(.preloader) {
+.content-list:has(.preloader) {
   /* Предлоадер ждет загрузки видео после поиска, а список элементов достается быстрее чем видео
   чтобы скрыть этот список убираю скролл, прелоадер закрывает остальное */
 
