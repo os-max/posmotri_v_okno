@@ -72,7 +72,7 @@ ol {
 }
 
 .search-form {
-  block-size: 54px;
+  min-block-size: 54px;
   display: flex;
   justify-content: space-between;
   gap: 40px;
@@ -101,7 +101,7 @@ ol {
 }
 
 .search-form__textfield {
-  inline-size: 225px;
+  min-inline-size: 225px;
   appearance: none;
   color: #fff;
   font: inherit;
@@ -164,6 +164,7 @@ ol {
 
 .button {
   color: inherit;
+  min-block-size: 34px;
   font-family: 'Fira Sans Condensed Bold', sans-serif;
   font-size: 18px;
   line-height: 21.6px;
@@ -187,8 +188,7 @@ ol {
 }
 
 .search-form__submit-button {
-  inline-size: 194px;
-  block-size: 34px;
+  min-inline-size: 194px;
 }
 
 .content__details {
@@ -208,12 +208,11 @@ ol {
 }
 
 .content__list {
+  /* Паддинг для четкого отображения рамок в фокусе и чтобы отодвинуть скролл */
   padding: 2px;
   block-size: 298px;
   overflow-x: hidden;
   overflow-y: scroll;
-  scrollbar-color: black transparent;
-  scrollbar-width: thin;
   position: relative;
   outline: none;
 }
@@ -283,6 +282,5 @@ ol {
 
 .more-button {
   inline-size: calc(100% - 4px);
-  max-block-size: 298px;
   margin: 2px;
 }
