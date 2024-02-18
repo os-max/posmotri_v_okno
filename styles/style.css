@@ -226,6 +226,12 @@ ol {
   overflow: hidden;
 }
 
+.preloader-template {
+  position: absolute;
+  block-size: 100%;
+  inline-size: 100%;
+}
+
 .content__list-item:not(:last-child) {
   padding-block-end: 34px;
   padding-inline-end: 3px;
