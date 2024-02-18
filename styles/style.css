@@ -9,16 +9,16 @@ html {
 }
 
 .page {
-  inline-size: 1200px;
-  block-size: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: auto;
   color: #fff;
   font-family: 'Fira Sans Condensed Regular', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  inline-size: 1200px;
+  block-size: 100%;
 }
 
 h1,
@@ -43,20 +43,20 @@ ol {
 
 .visually-hidden {
   position: absolute;
-  inline-size: 1px;
-  block-size: 1px;
   overflow: hidden;
   clip: rect(0 0 0 0);
+  inline-size: 1px;
+  block-size: 1px;
   clip-path: inset(50%);
   white-space: nowrap;
 }
 
 .content {
-  inline-size: 100%;
-  margin-inline: 30px;
   display: flex;
   align-items:flex-end;
   gap: 30px;
+  margin-inline: 30px;
+  inline-size: 100%;
 }
 
 .result__video-container {
@@ -65,23 +65,23 @@ ol {
 }
 
 .result__video {
-  inline-size: 711px;
-  block-size: 386px;
   object-fit: fill;
   object-position: center;
+  inline-size: 711px;
+  block-size: 386px;
 }
 
 .search-form {
-  min-block-size: 54px;
   display: flex;
   justify-content: space-between;
-  gap: 40px;
   align-items: flex-end;
+  gap: 40px;
+  min-block-size: 54px;
 }
 
 .search-form__fieldset {
-  border: none;
   flex-grow: 1;
+  border: none;
 }
 
 .search-form__fieldset:nth-child(2) {
@@ -89,27 +89,27 @@ ol {
 }
 
 .search-form__fieldset-title {
+  padding-block-end: 5px;
   font: inherit;
   line-height: 21.6px;
-  padding-block-end: 5px;
 }
 
 .search-form__label {
   display: inline-block;
-  inline-size: 100%;
   cursor: pointer;
+  inline-size: 100%;
 }
 
 .search-form__textfield {
-  min-inline-size: 225px;
-  appearance: none;
+  border-width: 1px 0;
+  border-style: solid;
+  border-color: #fff;
   color: #fff;
   font: inherit;
   line-height: 21.6px;
   background-color: transparent;
-  border-color: #fff;
-  border-style: solid;
-  border-width: 1px 0;
+  min-inline-size: 225px;
+  appearance: none;
 }
 
 .search-form__textfield::placeholder {
@@ -129,27 +129,27 @@ ol {
 
 .search-form__checkbox-list {
   display: flex;
-  gap: 15px;
   justify-content: space-between;
+  gap: 15px;
 }
 
 .search-form__pseudo-checkbox {
   display: flex;
-  block-size: 19px;
-  inline-size: 19px;
-  border: solid 1px #fff;
   justify-content: center;
   align-items: center;
+  border: solid 1px #fff;
   cursor: pointer;
+  block-size: 19px;
+  inline-size: 19px;
 }
 
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::after{
-  background-color: #fff;
-  display:inline-block;
   content: '';
+  display:inline-block;
+  margin: auto;
+  background-color: #fff;
   inline-size: 15px;
   block-size: 15px;
-  margin: auto;
 }
 
 .search-form__checkbox-list>.search-form__label {
@@ -163,15 +163,15 @@ ol {
 }
 
 .button {
+  border: 1px solid #fff;
+  outline: none;
   color: inherit;
-  min-block-size: 34px;
   font-family: 'Fira Sans Condensed Bold', sans-serif;
   font-size: 18px;
   line-height: 21.6px;
-  border: 1px solid #fff;
   background-color: transparent;
   cursor: pointer;
-  outline: none;
+  min-block-size: 34px;
 }
 
 .button:hover {
@@ -196,10 +196,10 @@ ol {
 }
 
 .title {
-  font-size: 75px;
-  font-family: Oswald, sans-serif;
-  line-height: 70.5px;
   padding-block-end: 26px;
+  font-family: Oswald, sans-serif;
+  font-size: 75px;
+  line-height: 70.5px;
   text-transform: uppercase;
 }
 
@@ -208,20 +208,21 @@ ol {
 }
 
 .content__list {
-  /* Паддинг для четкого отображения рамок в фокусе и чтобы отодвинуть скролл */
-  padding: 2px;
-  block-size: 298px;
-  overflow-x: hidden;
-  overflow-y: scroll;
   position: relative;
+
+  /* Паддинг для четкого отображения рамок в фокусе и чтобы отодвинуть скролл */
+
+  padding: 2px;
   outline: none;
+  overflow-y: scroll;
+  block-size: 298px;
 }
 
 .content__list:focus-visible {
   outline: 1px solid #fff;
 }
 
-.content-list:has(.preloader) {
+.content__list:has(.preloader) {
   /* Предлоадер ждет загрузки видео после поиска, а список элементов достается быстрее чем видео
   чтобы скрыть этот список убираю скролл, прелоадер закрывает остальное */
 
@@ -235,8 +236,8 @@ ol {
 }
 
 .content__list-item:not(:last-child) {
-  padding-block-end: 34px;
   padding-inline-end: 3px;
+  padding-block-end: 34px;
 }
 
 .content__video-card {
@@ -245,10 +246,10 @@ ol {
 }
 
 .content__card-link {
-  text-decoration: none;
-  color: inherit;
   display: block;
   outline: none;
+  color: inherit;
+  text-decoration: none;
 }
 
 .content__card-link:hover {
@@ -266,9 +267,9 @@ ol {
 }
 
 .content__video-card-title {
+  font-family: Oswald, sans-serif;
   font-size: 30px;
   line-height: 30px;
-  font-family: Oswald, sans-serif;
   text-transform: uppercase;
 }
 
@@ -281,6 +282,6 @@ ol {
 }
 
 .more-button {
-  inline-size: calc(100% - 4px);
   margin: 2px;
+  inline-size: calc(100% - 4px);
 }
