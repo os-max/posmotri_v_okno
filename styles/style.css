@@ -117,6 +117,10 @@ ol {
   font: inherit;
 }
 
+.search-form__textfield:active {
+  border-width: 1px;
+}
+
 .search-form__textfield:focus,
 .search-form__textfield:focus-visible {
   outline: none;
@@ -143,7 +147,8 @@ ol {
   inline-size: 19px;
 }
 
-.search-form__checkbox:checked + .search-form__pseudo-checkbox::after{
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::after,
+.search-form__checkbox:active + .search-form__pseudo-checkbox::after {
   content: '';
   display:inline-block;
   margin: auto;
