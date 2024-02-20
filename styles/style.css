@@ -14,7 +14,7 @@ html {
   align-items: center;
   margin: auto;
   color: #fff;
-  font-family: 'Fira Sans Condensed Regular', sans-serif;
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
   inline-size: 1200px;
@@ -65,7 +65,7 @@ ol {
 }
 
 .result__video {
-  object-fit: fill;
+  object-fit: cover;
   object-position: center;
   inline-size: 711px;
   block-size: 386px;
@@ -76,7 +76,6 @@ ol {
   justify-content: space-between;
   align-items: flex-end;
   gap: 40px;
-  min-block-size: 54px;
 }
 
 .search-form__fieldset {
@@ -95,7 +94,8 @@ ol {
 }
 
 .search-form__label {
-  display: inline-block;
+  display: flex;
+  align-items: center;
   cursor: pointer;
   inline-size: 100%;
 }
@@ -103,8 +103,8 @@ ol {
 .search-form__textfield {
   border-width: 1px 0;
   border-style: solid;
-  border-color: #fff;
-  color: #fff;
+  border-color: currentColor;
+  color: currentColor;
   font: inherit;
   line-height: 21.6px;
   background-color: transparent;
@@ -137,7 +137,7 @@ ol {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: solid 1px #fff;
+  border: solid 1px currentColor;
   cursor: pointer;
   block-size: 19px;
   inline-size: 19px;
@@ -163,12 +163,13 @@ ol {
 }
 
 .button {
-  border: 1px solid #fff;
+  border: 1px solid currentColor;
   outline: none;
   color: inherit;
-  font-family: 'Fira Sans Condensed Bold', sans-serif;
-  font-size: 18px;
+  font: inherit;
+  font-weight: 700;
   line-height: 21.6px;
+  text-align: center;
   background-color: transparent;
   cursor: pointer;
   min-block-size: 34px;
@@ -183,7 +184,7 @@ ol {
 }
 
 .button:focus-visible {
-  outline: 1px #fff solid;
+  outline: 1px solid currentColor;
   outline-offset: 2px;
 }
 
@@ -212,14 +213,18 @@ ol {
 
   /* Паддинг для четкого отображения рамок в фокусе и чтобы отодвинуть скролл */
 
-  padding: 2px;
+  padding: 1px;
   outline: none;
-  overflow-y: scroll;
+  overflow-y: auto;
+
+  /* Резервируем место под вертикальный скроллбар, чтобы не вызывать горизонтальный при его появлении */
+
+  scrollbar-gutter: stable;
   block-size: 298px;
 }
 
 .content__list:focus-visible {
-  outline: 1px solid #fff;
+  outline: 1px solid currentColor;
 }
 
 .content__list:has(.preloader) {
@@ -227,12 +232,6 @@ ol {
   чтобы скрыть этот список убираю скролл, прелоадер закрывает остальное */
 
   overflow: hidden;
-}
-
-.preloader-template {
-  position: absolute;
-  block-size: 100%;
-  inline-size: 100%;
 }
 
 .content__list-item:not(:last-child) {
@@ -256,24 +255,37 @@ ol {
   text-decoration: underline;
 }
 
+.content__card-link:active {
+  background-color: #545050;
+}
+
 .content__card-link:focus-visible {
-  outline: 1px solid #fff;
+  outline: 1px solid currentColor;
 }
 
 .content__video-card-thumbnail {
   flex: 0;
+  object-position: center;
+  object-fit: cover;
   inline-size: 194px;
   block-size: 103px;
 }
 
 .content__video-card-title {
+  display: block;
+  max-inline-size: 200px;
   font-family: Oswald, sans-serif;
   font-size: 30px;
   line-height: 30px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
   text-transform: uppercase;
 }
 
 .content__video-card-description {
+  display: block;
+  max-inline-size: 200px;
   line-height: 16.2px;
 }
 
